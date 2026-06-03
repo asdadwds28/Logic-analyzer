@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python -m pytest tests/test_decoders.py -q)",
+      "Bash(.venv/bin/python tests/test_csv_autodetect.py)",
+      "Bash(timeout 5 .venv/bin/python main.py)",
+      "Bash(python3 -c \"from PyQt5.QtWidgets import QApplication; app = QApplication.instance\\(\\); print\\(app, app.topLevelWidgets\\(\\) if app else 'no app'\\)\")",
+      "Bash(DISPLAY=:0 import -window root /tmp/screen_test.png)",
+      "Bash(.venv/bin/python -m pytest tests/test_decoders.py tests/run_decoder_smoke.py tests/test_csv_autodetect.py tests/test_all_autodetect.py)",
+      "Bash(python3 -c \"from analyzer.exporter import ProtocolExporter; print\\('Import OK'\\)\")",
+      "Bash(python3 -m pytest tests/test_decoders.py -v)",
+      "Bash(.venv/bin/python -m pytest tests/test_decoder_edge_cases.py -v)",
+      "Bash(.venv/bin/python -m pytest tests/test_decoders.py tests/test_decoder_edge_cases.py -v --tb=short)",
+      "Bash(python3 -c \"import main; print\\('GUI import OK'\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(kill 30566 *)",
+      "Bash(python3 main.py)",
+      "Bash(echo \"App started with PID: $!\")",
+      "Bash(echo \"PID: $!\")"
+    ]
+  }
+}
